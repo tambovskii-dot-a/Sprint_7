@@ -1,6 +1,7 @@
 import static org.hamcrest.CoreMatchers.is;
 import static ru.service.practicum.scooter.qa.Constants.*;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import io.restassured.response.ValidatableResponse;
 import org.junit.After;
 import org.junit.Test;

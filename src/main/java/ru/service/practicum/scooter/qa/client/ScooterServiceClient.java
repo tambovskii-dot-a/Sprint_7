@@ -51,7 +51,8 @@ public class ScooterServiceClient {
         .post("/api/v1/orders")
         .then();
   }
-@Step("Get Orders /api/v1/orders")
+
+  @Step("Get Orders /api/v1/orders")
   public ValidatableResponse getOrders() {
     return given()
         .baseUri(BASE_URL)

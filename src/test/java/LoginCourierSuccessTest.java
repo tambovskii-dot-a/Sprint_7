@@ -2,6 +2,7 @@ import static org.hamcrest.Matchers.emptyOrNullString;
 import static org.hamcrest.Matchers.not;
 import static ru.service.practicum.scooter.qa.Constants.*;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import io.restassured.response.ValidatableResponse;
 import org.junit.After;
 import org.junit.Before;
@@ -25,7 +26,7 @@ public class LoginCourierSuccessTest {
         client.deleteCourier(courierId);
     }
     @Test
-    public void LoginCourierTest(){
+    public void loginCourierTest(){
         ValidatableResponse response = client.loginCourier(Credentials.fromCourier(courier));
         response.assertThat().statusCode(200).body("id",not(emptyOrNullString()));
     }

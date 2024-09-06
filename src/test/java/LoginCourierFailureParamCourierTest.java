@@ -1,5 +1,6 @@
 import static ru.service.practicum.scooter.qa.Constants.*;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import io.restassured.response.ValidatableResponse;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -34,7 +35,7 @@ public class LoginCourierFailureParamCourierTest extends BaseParamCourierTest {
   }
 
   @Test
-  public void LoginCourierFailureTest() {
+  public void loginCourierFailureTest() {
     Courier courier = new Courier(login, password, firstName);
     ValidatableResponse response = client.loginCourier(Credentials.fromCourier(courier));
     response.assertThat().onFailMessage("Недостаточно данных для входа").and().statusCode(400);

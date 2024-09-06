@@ -1,11 +1,13 @@
 import static ru.service.practicum.scooter.qa.Constants.*;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import io.restassured.response.ValidatableResponse;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import ru.service.practicum.scooter.qa.client.Courier;
 import ru.service.practicum.scooter.qa.client.ScooterServiceClient;
+
 
 @RunWith(Parameterized.class)
 public class CreateCourierNegativeParamTest {

@@ -1,8 +1,8 @@
 package ru.service.practicum.scooter.qa.client;
 
 public class Credentials {
-  private final String login;
-  private final String password;
+  public final String login;
+  public final String password;
 
   private Credentials(String login, String password) {
     this.password = password;

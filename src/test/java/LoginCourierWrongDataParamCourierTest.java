@@ -1,5 +1,6 @@
 import static ru.service.practicum.scooter.qa.Constants.*;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import io.restassured.response.ValidatableResponse;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -30,7 +31,7 @@ public class LoginCourierWrongDataParamCourierTest extends BaseParamCourierTest 
   }
 
   @Test
-  public void LoginCourierTest() {
+  public void loginCourierTest() {
     Courier courier = new Courier(login, password, firstName);
     ValidatableResponse response = client.loginCourier(Credentials.fromCourier(courier));
     response.assertThat().onFailMessage("Учетная запись не найдена").and().statusCode(404);
